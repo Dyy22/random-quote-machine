@@ -2,6 +2,14 @@
 
 body {
   font-family: Raleway, sans-serif;
+  transition: all 1s;
+}
+
+#text p {
+  animation: fadin 1s forwards;
+}
+#author p {
+  animation: fadin 1s forwards;
 }
 
 .my-font-size {
@@ -13,13 +21,40 @@ body {
   height: 40px;
   display: inline-block;
   font-size: 1.2em;
+  transition: all 1s;
 }
 
-.social button {
-  width: 100px;
-  display: inline-block;
+.social a:hover {
+  opacity: 0.9;
+}
+
+#new-quote button {
+  border: none;
+  transition: all 1s;
+}
+
+#new-quote button:hover {
+  opacity: 0.9;
 }
 
 #quote-box {
   max-width: 600px;
+}
+
+@keyframes fadin {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
